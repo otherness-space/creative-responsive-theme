@@ -1,3 +1,15 @@
+/* --------------------------------------------- 
+
+* Filename:     custom.js
+* Version:      1.0.0 (2015-03-21)
+* Website:      http://www.zymphonies.com
+                http://www.freebiezz.com
+* Description:  System JS
+* Author:       Zymphonies Team
+                info@zymphonies.com
+                
+-----------------------------------------------*/
+
 jQuery(document).ready(function($) {
 
   $('.nav-toggle').click(function() {
