@@ -1,29 +1,29 @@
-jQuery(document).ready(function($) {
+/* --------------------------------------------- 
 
-  $('.nav-toggle').click(function() {
-    $('#main-menu div ul:first-child').slideToggle(250);
-    return false;
-  });
+* Filename:     custom-style.js
+* Version:      1.0.0 (2016-01-12)
+* Website:      http://www.zymphonies.com
+                http://www.freebiezz.com
+* Description:  System JS
+* Author:       Zymphonies Dev Team
+                info@zymphonies.com
 
-  if( ($(window).width() > 640) || ($(document).width() > 640) ) {
+-----------------------------------------------*/
 
-      $('#main-menu li').mouseenter(function() {
-        $(this).children('ul').css('display', 'none').stop(true, true).slideToggle(250).css('display', 'block').children('ul').css('display', 'none');
-      });
-      
-      $('#main-menu li').mouseleave(function() {
-        $(this).children('ul').stop(true, true).fadeOut(250).css('display', 'block');
-      })
-        } else {
+jQuery(document).ready(function($){
 
-    $('#main-menu li').each(function() {
-      if($(this).children('ul').length)
-        $(this).append('<span class="drop-down-toggle"><span class="drop-down-arrow"></span></span>');
-    });
+	//Main menu
+	$('#main-menu').smartmenus();
+	
+	//Mobile menu toggle
+	$('.navbar-toggle').click(function(){
+		$('.region-primary-menu').slideToggle();
+	});
 
-    $('.drop-down-toggle').click(function() {
-      $(this).parent().children('ul').slideToggle(250);
-    });
-  }
- 
+	//Mobile dropdown menu
+	if ( $(window).width() < 767) {
+		$(".region-primary-menu li a:not(.has-submenu)").click(function () {
+			$('.region-primary-menu').hide();
+	    });
+	}
 });
