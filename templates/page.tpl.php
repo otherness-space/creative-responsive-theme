@@ -88,22 +88,20 @@
       <div class="clear"></div>
     </header>
 
+    <?php if ($main_menu): ?>
     <div class="menu_wrapper">
       <nav id="main-menu"  role="navigation">
         <a class="nav-toggle" href="#">Navigation</a>
         <div class="menu-navigation-container">
-          <?php 
-          if (module_exists('i18n')) {
-            $main_menu_tree = i18n_menu_translated_tree(variable_get('menu_main_links_source', 'main-menu'));
-          } else {
-            $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
-          }
-          print drupal_render($main_menu_tree);
+          <?php $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu')); 
+            print drupal_render($main_menu_tree);
           ?>
         </div>
         <div class="clear"></div>
       </nav><!-- end main-menu -->
     </div>
+    <?php endif; ?>
+    
   </div>
 </div>
   
