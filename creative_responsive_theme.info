@@ -18,6 +18,8 @@ regions[footer_first]   = First Bottom
 regions[footer_second]  = Second Bottom
 regions[footer_third]   = Third Bottom
 regions[footer]         = Footer
+regions[page_top] 	    = Page top
+regions[page_bottom]    = Page bottom
 
 features[] = logo
 features[] = name
